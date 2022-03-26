@@ -1,0 +1,11 @@
+<p>Angular Http Client Example Component</p>
+<form #postForm="ngForm" style="display: flex; flex-direction: column; text-align: start; max-lines: 100;" (submit)="createPost(postForm.value)">
+   <input type="text" placeholder="Enter Title" style="width: 70vw;" ngModel name="title">
+   <input type="text" ngModel style="height: 20vh; width: 70vw;" placeholder="Enter Body" name="body">
+   <button>add post</button>
+</form>
+
+<div *ngFor="let item of posts" style="height: auto; width: 70vw; background-color: antiquewhite; margin-top: 10px;">
+   <p style="background-color: aliceblue; font-weight: bold; margin: auto; text-align: center;">{{item.title}}</p>
+   <p style="font-size: 16px; padding: 10px;">{{item.body}}</p>
+</div>
